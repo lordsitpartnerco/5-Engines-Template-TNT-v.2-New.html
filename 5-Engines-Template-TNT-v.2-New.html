@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Chainsaw Template Version Two - Chainsaw Template Coded in Bootstrap, HTML and CSS Coding by: ROLANDDDIAZ.COM">
 <meta name="author" content="ROLANDDDIAZ.COM">
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/style.css" rel="stylesheet" />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
@@ -37,20 +38,32 @@
 </div>
 <div class="container">
 <div class="row">
-<div class="col-md-3" style="background-color: #202216;">
+
+<div class="col-md-3" style="background-color: #212529; color: white; border-style: solid; border: 1px;">
 <br />
-<br />
-<a href="https://stores.ebay.com.au/jonojohno20004" target="_blank">
-<img  src="https://www.jonoandjohno.com.au/templates/images/jj_ebay_store_cats.jpg"  class="img-responsive img-rounded"  width="300" height="50" alt="Jono & Johno eBay Online Store Thumb 1">
-</a>
-<br />
-[%EBAY_CATEGORY_MENU id:"[@ebay_store_id@]" ebstore_url:"[@ebstore_url@]"%][%PARAM header%]
-[%END PARAM%] [%PARAM *level_1%]
-<div class="MainItemList"><a href="[@url@]" target="_blank" style="color: white;"><strong>[@name@]</strong></a></div>
-[%END PARAM%] [%PARAM footer%]
-[%END PARAM%][%END EBAY_CATEGORY_MENU%] 
-<br />
-<br />
+<img  src="https://www.jonoandjohno.com.au/templates/images/jj_ebay_store_cats.jpg" class="img-responsive img-rounded"  width="100%" height="auto" alt="Jono & Johno eBay Categories" /></a>
+[%EBAY_CATEGORY_MENU id:"[@ebay_store_id@]" ebstore_url:"[@ebstore_url@]"%][%PARAM header%] 
+<ul>
+[%END PARAM%]               
+[%PARAM *level_1%]
+<li>
+<div class="MainItemList"><a href="[@url@]" target="_blank" style="color: white;">[@name@]</a></div>
+</li> 
+<p>
+[%END PARAM%]
+[%PARAM footer%]
+[%END PARAM%][%END EBAY_CATEGORY_MENU%]      </p>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td align="left"><img src="https://chainsawspares.com.au/assets/images/links.png"></td>
+</tr>
+</table>
+<li><a href="https://stores.ebay.com.au/jonojohno20004/measuring-your-chain-size.html" target="_blank" style="color: white;">How do I know what chain to purchase?</a></</li>
+<li><a href="https://stores.ebay.com.au/jonojohno20004/About.html" target="_blank" style="color: white;">About Jono &amp; Johno</a></li>
+<li><a href="https://stores.ebay.com.au/jonojohno20004/FAQ.html" target="_blank" style="color: white;">FAQ</a></li>
+<li><a href="https://stores.ebay.com.au/jonojohno20004/Contact.html" target="_blank" style="color: white;">Contact Us</a></li>
+<li><a href="https://stores.ebay.com.au/jonojohno20004" target="_blank" style="color: white;">Ebay Store Home</a></li>
+</ul>
 </div>
 
 <div class="col-md-9" style="background-color: white;">
@@ -66,49 +79,68 @@
 <tr>
 <td valign=top align=center title="Enlarge in Place">
 [%DATA id:'image_full' if:'ne' value:''%] 
-<a href="[@image_full@]" target="_blank"> <img src="[@image_full@]" alt="Product Photo 1" title="Product Image 1" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@image_full@]" target="_blank"> 
+<img src="[@image_full@]" alt="Product Photo 1" title="Product Image 1" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 [%DATA id:'thumb_full_5' if:'ne' value:''%] 
-<a href="[@thumb_full_5@]" target="_blank"> <img src="[@thumb_full_5@]" alt="Product Photo 2" title="Product Image 2" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_5@]" target="_blank"> 
+<img src="[@thumb_full_5@]" alt="Product Photo 2" title="Product Image 2" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 </td>                          
 <td valign=top align=center title="Click to View">
 [%DATA id:'thumb_full_1' if:'ne' value:''%] 
-<a href="[@thumb_full_1@]" target="_blank"> <img src="[@thumb_full_1@]" alt="Product Photo 3" title="Product Image 3" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_1@]" target="_blank"> 
+<img src="[@thumb_full_1@]" alt="Product Photo 3" title="Product Image 3" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%] 
 <br>
 [%DATA id:'thumb_full_6' if:'ne' value:''%] 
-<a href="[@thumb_full_6@]" target="_blank"> <img src="[@thumb_full_6@]" alt="Product Photo 4" title="Product Image 4" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_6@]" target="_blank"> 
+<img src="[@thumb_full_6@]" alt="Product Photo 4" title="Product Image 4" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 </td>
 <td valign=top align=center title="Click to View">
 [%DATA id:'thumb_full_2' if:'ne' value:''%] 
-<a href="[@thumb_full_2@]" target="_blank"> <img src="[@thumb_full_2@]" alt="Product Photo 5" title="Product Image 5" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_2@]" target="_blank"> 
+<img src="[@thumb_full_2@]" alt="Product Photo 5" title="Product Image 5" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 [%DATA id:'thumb_full_7' if:'ne' value:''%] 
-<a href="[@thumb_full_7@]" target="_blank"> <img src="[@thumb_full_7@]" alt="Product Photo 6" title="Product Image 6" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_7@]" target="_blank"> <img src="[@thumb_full_7@]" alt="Product Photo 6" title="Product Image 6" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 </td>
 <td valign=top align=center title="Click to View">
 [%DATA id:'thumb_full_3' if:'ne' value:''%] 
-<a href="[@thumb_full_3@]" target="_blank"> <img src="[@thumb_full_3@]" alt="Product Photo 7" title="Product Image 7" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_3@]" target="_blank"> 
+<img src="[@thumb_full_3@]" alt="Product Photo 7" title="Product Image 7" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 [%DATA id:'thumb_full_8' if:'ne' value:''%] 
-<a href="[@thumb_full_8@]" target="_blank"> <img src="[@thumb_full_8@]" alt="Product Photo 8" title="Product Image 8" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_8@]" target="_blank"> 
+<img src="[@thumb_full_8@]" alt="Product Photo 8" title="Product Image 8" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 </td>
 <td valign=top align=center title="Click to View">
 [%DATA id:'thumb_full_4' if:'ne' value:''%] 
-<a href="[@thumb_full_4@]" target="_blank"> <img src="[@thumb_full_4@]" alt="Product Photo 9" title="Product Image 9" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_4@]" target="_blank"> 
+<img src="[@thumb_full_4@]" alt="Product Photo 9" title="Product Image 9" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 <br>
 [%DATA id:'thumb_full_9' if:'ne' value:''%] 
-<a href="[@thumb_full_9@]" target="_blank"> <img src="[@thumb_full_9@]" alt="Product Photo 10" title="Product Image 10" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > </a>
+<a href="[@thumb_full_9@]" target="_blank"> 
+<img src="[@thumb_full_9@]" alt="Product Photo 10" title="Product Image 10" style="border: 0px; margin: 0px; width: 120px; height: 120px;" > 
+</a>
 [%END DATA%]
 </td>
 </tr>
@@ -203,7 +235,8 @@
 <br />
 <br />
 <a href="https://www.ebay.com.au/itm/6-5HP-OHV-STATIONARY-PETROL-ENGINE-20MM-SHAFT-4-WATER-PUMP-GENERATOR-GO-KART-ETC-/201362569015?hash=item2ee224f737"  target="_blank"  class="btn btn-block  btn-success">9.0 hp - 25.4mm Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span></a>
-<a href="https://www.ebay.com.au/itm/13HP-OHV-STATIONARY-PETROL-ENGINE-HORIZONTAL-SHAFT-For-Saw-Bench-Auger-etc-/200940366282?pt=AU_Business_Industrial_Farming_Agriculture_Farming_Agriculture_Equipment&hash=item2ec8faa9ca&_uhb=1">13 hp - 25.4mm Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span></a>
+<a href="https://www.ebay.com.au/itm/13HP-OHV-STATIONARY-PETROL-ENGINE-HORIZONTAL-SHAFT-For-Saw-Bench-Auger-etc-/200940366282?pt=AU_Business_Industrial_Farming_Agriculture_Farming_Agriculture_Equipment&hash=item2ec8faa9ca&_uhb=1">13 hp - 25.4mm Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
 </div>
 
 </div>    
@@ -381,7 +414,8 @@
 </a>
 <a href="https://www.ebay.com.au/itm/13HP-ELECTRIC-START-STATIONARY-PETROL-ENGINE-For-Saw-Bench-Auger-Log-Splitter-/171217921018?pt=AU_Business_Industrial_Farming_Agriculture_Farming_Agriculture_Equipment&hash=item27dd6223fa&_uhb=1"  target="_blank"  class="btn btn-block  btn-success">13 hp - 25.4mm Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
-<a href="https://www.ebay.com.au/itm/20HP-678cc-HORIZONTAL-V-TWIN-CYLINDER-4-STROKE-PETROL-ENGINE-ELECTRIC-START-/171218785294" class="btn btn-block  btn-success" target="_blank">20 hp - 1"  Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span></a>
+<a href="https://www.ebay.com.au/itm/20HP-678cc-HORIZONTAL-V-TWIN-CYLINDER-4-STROKE-PETROL-ENGINE-ELECTRIC-START-/171218785294" class="btn btn-block  btn-success" target="_blank">20 hp - 1"  Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
 </div>
 <div class="col-md-6">
 <a href="https://www.ebay.com.au/itm/9HP-ELECTRIC-START-OHV-STATIONARY-PETROL-ENGINE-HORIZONTAL-SHAFT-suits-Saw-Bench-/171216413139?pt=AU_Business_Industrial_Farming_Agriculture_Farming_Agriculture_Equipment&hash=item27dd4b21d3&_uhb=1"  target="_blank"  class="btn btn-block  btn-success">9.0 hp - 25.4mm Shaft &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; <span class="glyphicon glyphicon-chevron-right"></span></a>
